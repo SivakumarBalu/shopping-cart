@@ -1,82 +1,19 @@
+{{# each products}}
 <div class="row">
+  {{# each this }}
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="https://upload.wikimedia.org/wikipedia/en/5/5e/Gothiccover.png" alt="..." class="img-responsive">
+      <img src={{ this.imagePath }} alt="..." class="img-responsive">
       <div class="caption">
-        <h3>Gothic</h3>
-        <p>Labore magna sunt eiusmod enim velit. Irure dolore ipsum elit exercitation anim sunt aliquip mollit aute commodo reprehenderit commodo. In incididunt eiusmod aliquip occaecat adipisicing proident pariatur pariatur qui cupidatat ut exercitation cillum ad. Ea elit adipisicing nisi ea consequat excepteur laboris tempor consectetur sint reprehenderit aliqua. Magna ut do elit ut qui. Eu pariatur velit anim laboris ipsum ea excepteur adipisicing mollit velit ea pariatur culpa fugiat.</p>
+        <h3>{{ this.title }}</h3>
+        <p>{{ this.description }}</p>
         <div class="clearfix"> 
-          <div class="price pull-left">$12</div>
-          <a href="#" class="btn btn-success pull-right" role="button">Button</a>
+          <div class="price pull-left">${{ this.price }}</div>
+          <a href="#" class="btn btn-success pull-right" role="button">Add to shopping cart</a>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="https://upload.wikimedia.org/wikipedia/en/5/5e/Gothiccover.png" alt="..." class="img-responsive">
-      <div class="caption">
-        <h3>Gothic</h3>
-        <p>Labore magna sunt eiusmod enim velit. Irure dolore ipsum elit exercitation anim sunt aliquip mollit aute commodo reprehenderit commodo. In incididunt eiusmod aliquip occaecat adipisicing proident pariatur pariatur qui cupidatat ut exercitation cillum ad. Ea elit adipisicing nisi ea consequat excepteur laboris tempor consectetur sint reprehenderit aliqua. Magna ut do elit ut qui. Eu pariatur velit anim laboris ipsum ea excepteur adipisicing mollit velit ea pariatur culpa fugiat.</p>
-        <div class="clearfix"> 
-          <div class="price pull-left">$12</div>
-          <a href="#" class="btn btn-success pull-right" role="button">Button</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="https://upload.wikimedia.org/wikipedia/en/5/5e/Gothiccover.png" alt="..." class="img-responsive">
-      <div class="caption">
-        <h3>Gothic</h3>
-        <p>Labore magna sunt eiusmod enim velit. Irure dolore ipsum elit exercitation anim sunt aliquip mollit aute commodo reprehenderit commodo. In incididunt eiusmod aliquip occaecat adipisicing proident pariatur pariatur qui cupidatat ut exercitation cillum ad. Ea elit adipisicing nisi ea consequat excepteur laboris tempor consectetur sint reprehenderit aliqua. Magna ut do elit ut qui. Eu pariatur velit anim laboris ipsum ea excepteur adipisicing mollit velit ea pariatur culpa fugiat.</p>
-        <div class="clearfix"> 
-          <div class="price pull-left">$12</div>
-          <a href="#" class="btn btn-success pull-right" role="button">Button</a>
-        </div>
-      </div>
-    </div>
-  </div>    
+  {{/each}} 
 </div>
-<div class="row">
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="https://upload.wikimedia.org/wikipedia/en/5/5e/Gothiccover.png" alt="..." class="img-responsive">
-      <div class="caption">
-        <h3>Gothic</h3>
-        <p>Labore magna sunt eiusmod enim velit. Irure dolore ipsum elit exercitation anim sunt aliquip mollit aute commodo reprehenderit commodo. In incididunt eiusmod aliquip occaecat adipisicing proident pariatur pariatur qui cupidatat ut exercitation cillum ad. Ea elit adipisicing nisi ea consequat excepteur laboris tempor consectetur sint reprehenderit aliqua. Magna ut do elit ut qui. Eu pariatur velit anim laboris ipsum ea excepteur adipisicing mollit velit ea pariatur culpa fugiat.</p>
-        <div class="clearfix"> 
-          <div class="price pull-left">$12</div>
-          <a href="#" class="btn btn-success pull-right" role="button">Button</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="https://upload.wikimedia.org/wikipedia/en/5/5e/Gothiccover.png" alt="..." class="img-responsive">
-      <div class="caption">
-        <h3>Gothic</h3>
-        <p>Labore magna sunt eiusmod enim velit. Irure dolore ipsum elit exercitation anim sunt aliquip mollit aute commodo reprehenderit commodo. In incididunt eiusmod aliquip occaecat adipisicing proident pariatur pariatur qui cupidatat ut exercitation cillum ad. Ea elit adipisicing nisi ea consequat excepteur laboris tempor consectetur sint reprehenderit aliqua. Magna ut do elit ut qui. Eu pariatur velit anim laboris ipsum ea excepteur adipisicing mollit velit ea pariatur culpa fugiat.</p>
-        <div class="clearfix"> 
-          <div class="price pull-left">$12</div>
-          <a href="#" class="btn btn-success pull-right" role="button">Button</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="https://upload.wikimedia.org/wikipedia/en/5/5e/Gothiccover.png" alt="..." class="img-responsive">
-      <div class="caption">
-        <h3>Gothic</h3>
-        <p>Labore magna sunt eiusmod enim velit. Irure dolore ipsum elit exercitation anim sunt aliquip mollit aute commodo reprehenderit commodo. In incididunt eiusmod aliquip occaecat adipisicing proident pariatur pariatur qui cupidatat ut exercitation cillum ad. Ea elit adipisicing nisi ea consequat excepteur laboris tempor consectetur sint reprehenderit aliqua. Magna ut do elit ut qui. Eu pariatur velit anim laboris ipsum ea excepteur adipisicing mollit velit ea pariatur culpa fugiat.</p>
-        <div class="clearfix"> 
-          <div class="price pull-left">$12</div>
-          <a href="#" class="btn btn-success pull-right" role="button">Button</a>
-        </div>
-      </div>
-    </div>
-  </div>    
-</div>
+{{/each}}

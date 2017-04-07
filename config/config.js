@@ -1,0 +1,1 @@
+module.exports = { database: 'localhost:9000/shopping'};
