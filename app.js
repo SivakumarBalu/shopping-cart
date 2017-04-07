@@ -9,10 +9,16 @@ var index = require('./routes/index');
 var mongoose = require('mongoose');
 var config = require('./config/config');
 var product = require('./models/product');
+var session = require('express-session');
+var flash = require('connect-flash');
+var passport = require('passport');
+
+require('./config/passport');
 
 var app = express();
 mongoose.connect('mongodb://siva:celeron@ds155150.mlab.com:55150/shopping');
 mongoose.Promise = global.Promise;
+
 
 // view engine setup
 app.engine('.hbs',expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
@@ -24,6 +30,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({secret: 'myfavoritesecuret', saveUninitialized: false, resave: false}));
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
